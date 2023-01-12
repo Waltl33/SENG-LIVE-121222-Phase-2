@@ -9,15 +9,22 @@
 // associated piece of state
 
 // - Add an `onSubmit` event handler to the form
-
+import { useState} from "react"
 const ProjectForm = () => {
+
+  const [name, nameSetter] = useState("")
+
   return (
     <section>
       <form className="form" autoComplete="off">
         <h3>Add New Project</h3>
 
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" 
+                id="name" 
+                name="name" 
+                  value={name}
+                />
 
         <label htmlFor="about">About</label>
         <textarea id="about" name="about" />
